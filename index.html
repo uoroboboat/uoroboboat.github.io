@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="Description" content="University of Ottawa's Autonomous Robotics Team">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+
+	<title>uOttawa Roboboat</title>
+
+	<link rel="stylesheet" type="text/css" href="font.css" media="screen" />
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+	<noscript>
+		<style>
+			.en {
+				visibility: visible;
+				display: block;
+			}
+
+			.fr {
+				visibility: hidden;
+				display: none;
+			}
+		</style>
+	</noscript>
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" rel="preconnect"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" rel="preconnect"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" rel="preconnect"></script>
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body id="container">
+	<header>
+		<div class="content">
+			<a href="#home">
+				<img id="nav-logo" src="img/logo.png" alt="uOttawa Roboboat logo">
+			</a>
+
+			<label for="hamburger"> <i data-feather="menu"></i></label>
+			<input type="checkbox" id="hamburger" />
+
+			<nav>
+				<ul>
+					<li>
+						<span class="en"><a href="#home" title="Home">Home</a></span>
+						<span class="fr"><a href="#home" title="Accueil">Accueil</a></span>
+					</li>
+					<li>
+						<span class="en"><a href="#about" title="About">About</a></span>
+						<span class="fr"><a href="#about" title="À propos">À propos</a></span>
+					</li>
+					<li>
+						<span class="en"><a href="#gallery" title="Gallery">Gallery</a></span>
+						<span class="fr"><a href="#gallery" title="Galerie">Galerie</a></span>
+					</li>
+					<li>
+						<span class="en"><a href="#team" title="Team">Team</a></span>
+						<span class="fr"><a href="#team" title="Équipe">Équipe</a></span>
+					</li>
+					<li>
+						<span class="en"><a href="#competitions" title="Competitions">Competitions</a></span>
+						<span class="fr"><a href="#competitions" title="Compétitions">Compétitions</a></span>
+					</li>
+					<li>
+						<span class="en"><a href="#sponsors" title="Sponsors">Sponsors</a></span>
+						<span class="fr"><a href="#sponsors" title="Commanditaires">Commanditaires</a></span>
+					</li>
+					<li>
+						<span class="en"><a onclick="showFrench()" id="toggleLang"><i data-feather="globe"></i>FR</a></span>
+						<span class="fr"><a onclick="showEnglish()" id="toggleLang"><i data-feather="globe"></i>EN</a></span>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section id="home">
+		<div class="content">
+			<img src="img/logo.png" alt="uOttawa Roboboat logo">
+			<p id="home-title">uOttawa Roboboat</p>
+			<p id="home-description">
+				<span class="en">University of Ottawa's Autonomous Robotics Team</span>
+				<span class="fr">L'équipe de robotique autonome de l'Université d'Ottawa </span>
+			</p>
+		</div>
+	</section>
+
+	<section id="about" class="content">
+		<p class="section-title">
+			<span class="en">About Us</span>
+			<span class="fr">À propos de nous</span>
+		</p>
+		<div>
+			<p>
+				<span class="en">
+					A team of engineering students who took on the challenge of designing and building an
+					autonomous,
+					robotic boat to navigate through aquatic obstacle courses at the International RoboBoat Competition.
+					Hosted by RoboNation, this competition is held in Reed Canal Park, South Daytona Florida, attracting
+					engineering students from all around the world.
+				</span>
+				<span class="fr">
+					Une équipe d’étudiants en ingénierie qui ont relevé le défi de concevoir et de
+					construire un système autonome,
+					soit un bateau robotique pour naviguer à travers des parcours d’obstacles aquatiques à la
+					compétition
+					internationale RoboBoat.
+					Organisée par RoboNation, cette Compétition a lieu à Reed Canal Park, dans le sud de Daytona, en
+					Floride,
+					et attire
+					des étudiants en génie du monde entier.
+				</span>
+			</p>
+			<div id="location">
+				<i data-feather="map-pin"></i>
+				<p>Ottawa, Canada</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="gallery" class="content">
+
+		<p class="section-title">
+			<span class="en">Gallery</span>
+			<span class="fr">Galerie</span>
+		</p>
+		<p>
+			<span class="en">Countless hours spent designing, building and testing - captured through the lense of a
+				camera</span>
+			<span class="fr">D'innombrables heures consacrées à la conception, à la construction et aux tests -
+				capturées à travers l'objectif d'une caméra</span>
+		</p>
+		<div class="video">
+			<a data-src='#vid-boat' data-fancybox='roboboat-gallery' href="javascript:;">
+				<div class="vid-thumbnail">
+					<img src='img/vid-thumbnail.png' alt="Video thumbnail">
+					<div class="vid-overlay"></div>
+					<i data-feather="play"></i>
+				</div>
+			</a>
+
+			<video id="vid-boat" style="display: none" height="0" controls>
+				<source src="assets/vid.mp4" type="video/mp4">
+				<span class="en">Your browser does not support the video tag.</span>
+				<span class="fr">Votre navigateur ne supporte pas le tag vidéo.</span>
+			</video>
+		</div>
+
+		<div id="pictures">
+			<a data-src='img/gallery/gallery1.jpg' data-fancybox='roboboat-gallery' href="javascript:;">
+				<div class="vid-thumbnail">
+					<img src='img/gallery/thumbnail/gallery1.jpg' alt="Gallery image #1">
+					<div class="pic-overlay"></div>
+				</div>
+			</a>
+			<a data-src='img/gallery/gallery2.jpg' data-fancybox='roboboat-gallery' href="javascript:;">
+				<div class="vid-thumbnail">
+					<img src='img/gallery/thumbnail/gallery2.jpg' alt="Gallery image #1">
+					<div class="pic-overlay"></div>
+				</div>
+			</a>
+			<a data-src='img/gallery/gallery3.jpg' data-fancybox='roboboat-gallery' href="javascript:;">
+				<div class="vid-thumbnail">
+					<img src='img/gallery/thumbnail/gallery3.jpg' alt="Gallery image #1">
+					<div class="pic-overlay"></div>
+				</div>
+			</a>
+			<a data-src='img/gallery/gallery4.jpg' data-fancybox='roboboat-gallery' href="javascript:;">
+				<div class="vid-thumbnail">
+					<img src='img/gallery/thumbnail/gallery4.jpg' alt="Gallery image #1">
+					<div class="pic-overlay"></div>
+				</div>
+			</a>
+		</div>
+
+		<button class="section-button" onclick="addPhotos()">
+			<span class="en">View More</span>
+			<span class="fr">Afficher plus</span>
+		</button>
+	</section>
+
+	<section id="team" class="content">
+		<p class="section-title">
+			<span class="en">Team</span>
+			<span class="fr">Équipe</span>
+		</p>
+		<span class="en">
+			<p>
+				We take pride in our multidisciplinary team, having a range of undergraduate students studying Software,
+				Computer,
+				Electrical, Mechanical, Bio-Medical Mechanical Engineering's, Computing Technology and Computer Science.
+				Our team is divided into the following three sub-teams:
+			</p> <br> <br>
+			<p>
+				<b>Software Team</b> <br>
+				Work to achieve full autonomy of the boat so that it can perform all challenges.
+				This will involve implementing algorithms for mapping as well as controlling the boat through software.
+			</p>
+			<p> <br>
+				<b>Electrical Team</b> <br>
+				Focus on the research, design and manufacturing of a new boat.
+			</p>
+			<p> <br>
+				<b>Electrical Team</b> <br>
+				Tasked with powering all electronics on the boat. Also working to integrate PCB design, hydrophone
+				functionality, thermal management and waterproofing.
+			</p> <br>
+		</span>
+		<span class="fr">
+			<p>
+				Nous sommes fiers de notre équipe multidisciplinaire, composée de nombreux étudiants de premier cycle
+				qui étudient en génie logiciel, génie informatique, génie électrique, génie mécanique, génie mécanique
+				biomédical, technologie de l'informatique et informatique. Notre équipe est divisée en trois
+				sous-équipes :
+			</p> <br> <br>
+			<p>
+				<b>Équipe de logiciels</b> <br>
+				Travailler pour atteindre l'autonomie complète du bateau afin qu'il puisse relever tous les défis. Cela
+				impliquera la mise en œuvre d'algorithmes pour la cartographie ainsi que le contrôle du bateau à l'aide
+				du logiciel.
+			</p>
+			<p> <br>
+				<b>Équipe mécanique</b> <br>
+				Concentré sur la recherche, la conception et la fabrication d'un nouveau bateau.
+			</p>
+			<p> <br>
+				<b>Équipe électrique</b> <br>
+				Chargé d'alimenter tous les composants électroniques du bateau. L'équipe s'occupe également à intégrer
+				la conception de circuits imprimés et à rendre les hydrophones fonctionnels, tout en s'inquiétant de la
+				gestion thermique et l'imperméabilisation.
+			</p> <br>
+		</span>
+		<div id="top">
+			<div class='person'>
+				<p class='function'>
+					<span class="en">Team Lead</span>
+					<span class="fr">Chef d'équipe</span>
+				</p>
+				<img src='img/team/person.png' alt="Avatar icon">
+				<p class='name'>Natalia Maximo</p>
+				<p class='description'>
+					<span class="en">Computer Science</span>
+					<span class="fr">Informatique</span>
+				</p>
+			</div>
+			<div class='person'>
+				<p class='function'>
+					<span class="en">Faculty Advisor</span>
+					<span class="fr">Conseiller de la faculté</span>
+				</p>
+				<img src='img/team/person.png' alt="Avatar icon">
+				<p class='name'>Dr David Knox</p>
+				<p class='description'></p>
+			</div>
+		</div>
+		<div id="teams">
+			<div id="software">
+				<p class="team-title">
+					<span class="en">Software Team</span>
+					<span class="fr">Équipe logiciel</span>
+				</p>
+
+				<div class="people">
+					<div class='person'>
+						<img src='img/team/person.png' alt="Avatar icon">
+						<p class='name'>Benoît Jeaurond</p>
+						<p class='description'>
+							<span class="en">Software Engineering</span>
+							<span class="fr">Génie logiciel</span>
+						</p>
+					</div>
+					<div class='person'>
+						<img src='img/team/person.png' alt="Avatar icon">
+						<p class='name'>Dominic Roy-Stang</p>
+						<p class='description'>
+							<span class="en">Software Engineering</span>
+							<span class="fr">Génie logiciel</span>
+						</p>
+					</div>
+					<div class='person'>
+						<img src='img/team/person.png' alt="Avatar icon">
+						<p class='name'>Meina Oria</p>
+						<p class='description'>
+							<span class="en">Software Engineering</span>
+							<span class="fr">Génie logiciel</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="electrical">
+				<p class="team-title">
+					<span class="en">Electrical Team</span>
+					<span class="fr">Équipe électrique</span>
+				</p>
+
+				<div class="people">
+					<div class='person'>
+						<img src='img/team/person.png' alt="Avatar icon">
+						<p class='name'>Amadou Coulibaly</p>
+						<p class='description'>
+							<span class="en">Electrical Engineering</span>
+							<span class="fr">Génie électrique</span>
+						</p>
+					</div>
+					<div class='person'>
+						<img src='img/team/person.png' alt="Avatar icon">
+						<p class='name'>Julien Lambert</p>
+						<p class='description'>
+							<span class="en">Electrical Engineering</span>
+							<span class="fr">Génie électrique</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="mechanical">
+				<p class="team-title">
+					<span class="en">Mechanical Team</span>
+					<span class="fr">Équipe mécanique</span>
+				</p>
+
+				<div class="people">
+					<div class='person'>
+						<img src='img/team/person.png' alt="Avatar icon">
+						<p class='name'>Joshua Vassel</p>
+						<p class='description'>
+							<span class="en">Mechanical Engineering</span>
+							<span class="fr">Génie mécanique</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a class="section-button" href="mailto:uoroboboat@gmail.com">
+			<span class="en">Become a member</span>
+			<span class="fr">Devenir membre</span>
+		</a>
+	</section>
+
+	<section id="competitions" class="content">
+		<p class="section-title">
+			<span class="en">Competitions</span>
+			<span class="fr">Compétitions</span>
+		</p>
+
+		<p>
+			<span class="en">
+				RoboBoat is an international student competition designed to build and enhance a community of
+				innovators, capable of making substantive contributions to the Autonomous Surface Vehicle (ASV) domain.
+				Such vision is achieved by providing a venue and mechanism, whereby practitioners of this technology
+				come together at the event to share knowledge, innovate, and collaboratively push the envelope of ASV
+				systems.
+			</span>
+			<span class="fr">
+				RoboBoat est une compétition internationale d’étudiants conçus pour créer et améliorer une communauté
+				d’innovateurs, capable d’apporter une contribution substantielle à la communauté de véhicules de surface
+				autonome (VSA).
+				Cette vision est réalisée en fournissant un lieu et un mécanisme permettant aux praticiens de cette
+				technologie de se réunir lors de l'événement pour partager des connaissances, pour innover et pour
+				collaborer tout en poussant les limites des systèmes ASV.
+			</span>
+		</p>
+
+		<div id="competition-images">
+			<a href="https://www.auvsifoundation.org/competition/roboboat">
+				<img src="img/competition/roboboat.png" alt="RoboBoat competition logo">
+			</a>
+			<a href="https://www.auvsifoundation.org/">
+				<img src="img/competition/auvsi.png" alt="AUVSI logo">
+			</a>
+			<a href="https://www.auvsifoundation.org/">
+				<img src="img/competition/robonation.png" alt="Robonation logo">
+			</a>
+		</div>
+	</section>
+
+	<section id="sponsors" class="content">
+		<p class="section-title">
+			<span class="en">Sponsors</span>
+			<span class="fr">Commanditaires</span>
+		</p>
+		<p>
+			<span class="en">We could not be where we are today without our past and present sponsors</span>
+			<span class="fr">Nous ne pourrions pas être où nous sommes aujourd'hui sans nos commanditaires</span>
+		</p>
+		<div id="sponsors-photos">
+			<a href="https://www.uottawa.ca">
+				<img src="img/sponsors/uottawa.png" alt="University of Ottawa">
+			</a>
+			<a href="https://www.pelican.com">
+				<img src="img/sponsors/pelican.png" alt="Pelican">
+			</a>
+			<a href="https://engineering.uottawa.ca/CEED">
+				<img src="img/sponsors/ceed.jpg" alt="Centre for Entrepreneurship and Engineering Design">
+			</a>
+			<a href="https://www.solidworks.com">
+				<img src="img/sponsors/solidworks.png" alt="Solidworks">
+			</a>
+			<a href="https://www.mathworks.com">
+				<img src="img/sponsors/mathworks.png" alt="MathWorks">
+			</a>
+			<a href="https://bluerobotics.com">
+				<img src="img/sponsors/bluerobotics.png" alt="BlueRobotics">
+			</a>
+		</div>
+
+		<a class="section-button" href="mailto:uoroboboat@gmail.com">
+			<span class="en">Sponsor Us</span>
+			<span class="fr">Parrainez-nous</span>
+		</a>
+	</section>
+
+	<footer>
+		<div class="content">
+			<div id="footer-seperation">
+				<div id="contact">
+					<p class="section-title">
+						<span class="en">Get in touch</span>
+						<span class="fr">Restons en contact</span>
+					</p>
+					<p>
+						<span class="en">Let's make something awesome together! We'd love to hear from you. Here's how
+							you can reach us.</span>
+						<span class="fr">Faisons ensemble quelque chose de génial! Nous aimerions avoir des nouvelles de
+							vous. Voici comment vous pouvez nous joindre.</span>
+					</p>
+
+					<a href="mailto:uoroboboat@gmail.com" class="social-sub">
+						<i data-feather="mail"></i>
+						<p>uoroboboat@gmail.com</p>
+					</a>
+				</div>
+				<div id="social">
+					<p class="section-title">
+						<span class="en">Socials</span>
+						<span class="fr">Sociaux</span>
+					</p>
+					<p>
+						<span class="en">Want to stay up to date with our latest experiences?</span>
+						<span class="fr">Voulez-vous rester à jour avec nos dernières expériences?</span>
+					</p>
+
+					<a href="https://www.facebook.com/uoroboboat/" class="social-sub">
+						<i data-feather="facebook"></i>
+						<p>@uoroboboat</p>
+					</a>
+
+					<a href="https://www.instagram.com/uoroboboat/" class="social-sub">
+						<i data-feather="instagram"></i>
+						<p>@uoroboboat</p>
+					</a>
+				</div>
+			</div>
+
+			<p id="copyright">© 2019 uOttawa Roboboat</p>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
+
+</body>
+
+</html>
