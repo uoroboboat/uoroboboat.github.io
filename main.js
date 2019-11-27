@@ -84,20 +84,47 @@ function slideshowFadeIn() {
 
 function addPhotos() {
 	var newPhotos = $("\
-		<a data-src='img/gallery/gallery5.jpg' data-fancybox='roboboat-gallery' href='javascript:;'>\
-			<div class='vid-thumbnail'>\
-				<img src='img/gallery/thumbnail/gallery5.jpg'>\
-				<div class='pic-overlay'></div>\
-			</div>\
-		</a>\
-	")
+		<div class='pictures' id='bottom-pictures'>\
+			<a data-src='img/gallery/gallery6.jpg' data-fancybox='roboboat-gallery' href='javascript:;'>\
+				<div class='vid-thumbnail'>\
+					<img src='img/gallery/thumbnail/gallery6.jpg'>\
+					<div class='pic-overlay'></div>\
+				</div>\
+			</a>\
+			<a data-src='img/gallery/gallery7.jpg' data-fancybox='roboboat-gallery' href='javascript:;'>\
+				<div class='vid-thumbnail'>\
+					<img src='img/gallery/thumbnail/gallery7.jpg'>\
+					<div class='pic-overlay'></div>\
+				</div>\
+			</a>\
+			<a data-src='img/gallery/gallery8.jpg' data-fancybox='roboboat-gallery' href='javascript:;'>\
+				<div class='vid-thumbnail'>\
+					<img src='img/gallery/thumbnail/gallery8.jpg'>\
+					<div class='pic-overlay'></div>\
+				</div>\
+			</a>\
+			<a data-src='img/gallery/gallery9.jpg' data-fancybox='roboboat-gallery' href='javascript:;'>\
+				<div class='vid-thumbnail'>\
+					<img src='img/gallery/thumbnail/gallery9.jpg'>\
+					<div class='pic-overlay'></div>\
+				</div>\
+			</a>\
+			<a data-src='img/gallery/gallery10.jpg' data-fancybox='roboboat-gallery' href='javascript:;'>\
+				<div class='vid-thumbnail'>\
+					<img src='img/gallery/thumbnail/gallery10.jpg'>\
+					<div class='pic-overlay'></div>\
+				</div>\
+			</a>\
+		</div>\
+	");
 
-	$("#pictures").append(newPhotos);
+	$("#gallery").append(newPhotos);
 
 	$("#gallery .section-button").animate({
 		height: 0,
 		opacity: 0,
-		margin: 0
+		margin: 0,
+		padding: 0,
 	}, 1000, function () {
 		$("#gallery .section-button").attr("disabled", true);
 	});

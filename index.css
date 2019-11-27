@@ -452,7 +452,7 @@ header>.content>a {
     background-color: #d3d3d3;
 }
 
-#pictures {
+.pictures {
     width: calc(100% + 20px);
     margin-bottom: -4px;
     margin-top: 10px;
@@ -463,7 +463,7 @@ header>.content>a {
     min-height: 1px;
 }
 
-#pictures a {
+.pictures a {
     flex: 1 0 21%;
     margin: 10px;
     position: relative;
@@ -482,11 +482,16 @@ header>.content>a {
     }
 }
 
-#pictures img {
+.pictures img {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.314);
     min-width: 230px;
     transition: transform 0.3s ease;
+}
+
+#bottom-pictures {
+    margin-bottom: 15px;
+    margin-top: 0px;
 }
 
 .vid-thumbnail {
@@ -565,25 +570,25 @@ header>.content>a {
 
 
 @media (max-width: 600px) {
-    #pictures div {
+    .pictures div {
         min-width: 0;
         margin: 0px;
     }
-    #pictures a {
+    .pictures a {
         flex: 1 0 40%;
         margin: 5px;
 		width: calc(100% - 50px);
 	}
-	#pictures img {
+	.pictures img {
 		min-width: 0;
 	}
-	#pictures .pic-overlay {
+	.pictures .pic-overlay {
 		left: -5px;
 		top: -5px;
 		width: calc(100% - 5px);
 		height: calc(100% - 5px);
 	}
-	#pictures {
+	.pictures {
 		margin-bottom: -4px;
 		margin-top: 5px;
 		width: calc(100% + 15px);
